@@ -1,3 +1,6 @@
 *
 !self_extracting_batch.py
 !.gitignore
+!example
+!example/input.bat
+!example/yo.zip

@@ -3,7 +3,8 @@ import sys, base64
 if len(sys.argv) != 4:
     print("incorrect args. usage: python self_extracting_batch.py <input batch> <input zip> <output batch>")
 
-start = '''more +{length} %0 > "%~dp0\\data.b64"
+start = '''@echo off
+more +{length} %0 > "%~dp0\\data.b64"
 certutil -decode "%~dp0\\data.b64" "%~dp0\\data.zip"
 tar -xvzf "%~dp0\\data.zip"
 del "%~dp0\\data.b64"
